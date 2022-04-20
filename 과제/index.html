@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      /* body {
+        width: 100vw;
+      } */
+      header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: top 1s;
+      }
+      header h1 {
+        width: 100%;
+        background-color: rgb(30, 221, 116);
+        color: white;
+        font-weight: 900;
+        text-align: center;
+        text-shadow: 1px 1px p1x black;
+        padding: 1.2rem;
+      }
+      nav {
+        background-color: rgb(38, 38, 82);
+        width: 100%;
+
+        border-radius: 10px;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+      nav li {
+        padding: 6px 16px;
+        color: white;
+        border: 3px solid transparent;
+        margin: 0;
+      }
+      nav li:nth-of-type(4) {
+        margin-left: auto;
+      }
+      nav li:nth-of-type(1) {
+        margin-left: 100px;
+      }
+      nav li:hover {
+        cursor: pointer;
+        background-color: rgb(219, 141, 23);
+      }
+      article table {
+        margin: 150px 30px 20px 30px;
+        list-style: none;
+        color: rgb(39, 35, 35);
+        border: 1px solid rgb(138, 134, 134);
+        width: 90vw;
+        font-size: 15px;
+        border-style: none;
+      }
+      table th,
+      td {
+        border: 1px solid rgb(138, 134, 134);
+        border-style: none;
+        border-bottom: 1px solid rgb(138, 134, 134);
+      }
+      article table tr:nth-of-type(1) {
+        border-top: 1px solid rgb(138, 134, 134);
+        background-color: rgb(196, 186, 186);
+      }
+      div button {
+        background-color: rgb(22, 120, 231);
+        color: white;
+        border-radius: 2px;
+        float: right;
+        margin-right: 120px;
+        padding: 0 10px;
+      }
+      div button:hover {
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>고려 고교 학사관리 2022v1</h1>
+      <nav>
+        <ul>
+          <li>HOME</li>
+          <li>학생정보</li>
+          <li>성적일람표</li>
+          <li>로그인</li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <table>
+        <tr>
+          <th>학번</th>
+          <th>이름</th>
+          <th>전공</th>
+          <th>학년</th>
+          <th>주소</th>
+          <th>전화번호</th>
+        </tr>
+        <tr>
+          <th>20210001</th>
+          <th>홍길동</th>
+          <th>컴퓨터공학</th>
+          <th>2</th>
+          <th>서울시동대문구</th>
+          <th>02-222-1234</th>
+        </tr>
+        <tr>
+          <th>20210002</th>
+          <th>성춘향</th>
+          <th>전자공학</th>
+          <th>3</th>
+          <th>전라북도익산시</th>
+          <th>063-111-1234</th>
+        </tr>
+      </table>
+    </article>
+    <div>
+      <button type="button">학생정보 추가</button>
+    </div>
+    <section></section>
+  </body>
+</html>

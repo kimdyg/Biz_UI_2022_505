@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 홈페이지</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+      }
+      nav {
+        flex: 1;
+        vertical-align: top;
+        border: 1px solid green;
+        padding: 10px;
+      }
+      nav ul {
+        list-style: none;
+      }
+      nav li {
+        border-bottom: 1px solid red;
+        padding: 10px;
+        /* box-shadow offset-x offset-y blur 색상
+        inset 은 그림자를 box 안쪽으로 들어가게 */
+        box-shadow: inset 0 0 0 #d80268;
+        transition: 0.5s;
+      }
+      nav li:hover {
+        box-shadow: inset 0 100px 50px #d80268;
+        cursor: pointer;
+      }
+      section {
+        flex: 6;
+        padding: 10px;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>HOME</li>
+        <li>회사소개</li>
+        <li>공지사항</li>
+        <li>자유게시판</li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        헌법재판소 재판관은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는
+        파면되지 아니한다. 모든 국민은 고문을 받지 아니하며, 형사상 자기에게
+        불리한 진술을 강요당하지 아니한다. 대통령은 법률이 정하는 바에 의하여
+        훈장 기타의 영전을 수여한다. 언론·출판에 대한 허가나 검열과 집회·결사에
+        대한 허가는 인정되지 아니한다.
+      </article>
+      <article>
+        감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한
+        사항은 법률로 정한다. 모든 국민은 주거의 자유를 침해받지 아니한다.
+        주거에 대한 압수나 수색을 할 때에는 검사의 신청에 의하여 법관이 발부한
+        영장을 제시하여야 한다. 재판의 전심절차로서 행정심판을 할 수 있다.
+        행정심판의 절차는 법률로 정하되, 사법절차가 준용되어야 한다.
+      </article>
+      <article>
+        대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다.
+        모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를
+        가진다. 제3항의 승인을 얻지 못한 때에는 그 처분 또는 명령은 그때부터
+        효력을 상실한다. 이 경우 그 명령에 의하여 개정 또는 폐지되었던 법률은 그
+        명령이 승인을 얻지 못한 때부터 당연히 효력을 회복한다.
+      </article>
+    </section>
+  </body>
+</html>
