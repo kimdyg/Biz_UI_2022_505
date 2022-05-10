@@ -12,6 +12,10 @@
         padding: 0;
         box-sizing: border-box;
       }
+      section {
+        display: flex;
+        justify-content: space-around;
+      }
       div {
         border: 1px solid black;
         display: flex;
@@ -20,9 +24,27 @@
         flex-direction: column;
         justify-content: space-evenly;
       }
-      section {
-        display: flex;
-        justify-content: space-around;
+      button {
+        background-color: green;
+        color: white;
+        width: 70px;
+        height: 40px;
+        align-self: center;
+      }
+      .hf {
+        flex: 0.5;
+      }
+      .hm {
+        flex: 0.5;
+      }
+      .hm2 {
+        flex: 2;
+      }
+      .he {
+        flex: 1.5;
+      }
+      .he2 {
+        flex: 2;
       }
     </style>
   </head>
@@ -48,12 +70,12 @@
         <p>3</p>
       </div>
       <div class="he">
-        <p>사진</p>
+        <a href="">사진</a>
       </div>
-      <div class="he">
+      <div class="he2">
         <p>1</p>
         <p>3</p>
-        <p class="box"></p>
+        <button type="button">지도</button>
       </div>
     </section>
   </body>
