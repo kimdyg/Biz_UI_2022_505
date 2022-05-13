@@ -32,35 +32,33 @@
       div {
         display: flex;
         flex-direction: column;
-        width: 60vw;
+        width: 50vw;
         height: 30vh;
         align-self: center;
       }
       div p {
-      margin: 40px 0 20px 0;
+        margin: 40px 0 20px 0;
       }
-      .d1, .d3 {
+      .d1,
+      .d3 {
         flex: 1;
       }
       .d2 {
         flex: 2;
-      }
-      .d4{
-        flex: 3;
+        resize: none;
+        border: none;
       }
       img {
         width: 10vw;
         height: 15vh;
       }
-      .d3{
+      .d3 {
         flex-direction: row;
         flex: 1 2 0;
-        
       }
       .d3 input {
         width: 15vw;
         height: 5vh;
-        
       }
       .d31 {
         padding: 30px 10px;
@@ -73,9 +71,28 @@
       div #image_container {
         flex-direction: row;
         align-items: center;
-
       }
-      
+      textarea {
+        width: 100%;
+        height: 20rem;
+        resize: none;
+      }
+      .d4 {
+        height: 100px;
+      }
+      .dd {
+        align-items: center;
+      }
+      .dd input:nth-of-type(1) {
+        width: 50vw;
+        height: 40px;
+        font-size: 1rem;
+      }
+      .dd input:nth-of-type(2) {
+        width: 10vw;
+        height: 30px;
+        margin-top: 10%;
+      }
     </style>
   </head>
   <body>
@@ -84,44 +101,59 @@
       <a></a>
     </header>
     <section>
-        <div class="d1">
-          <p>제목</p>
-          <input
+      <div class="d1">
+        <p>제목</p>
+        <input
           class="tb"
           type="text"
           placeholder="내용을 입력해주세요"
-          style="height:40px"
-          />
-        </div>
+          style="height: 40px"
+        />
+      </div>
       <div class="d2">
         <p>내용</p>
-        <textarea placeholder="내용을 입력해주세요" cols="200" rows="20"></textarea>
+        <textarea
+          placeholder="내용을 입력해주세요"
+          cols="200"
+          rows="20"
+        ></textarea>
       </div>
       <div class="d3">
         <div class="d31">
-        <img src="직찍1.jpg" id="d311">
+          <img src="직찍1.jpg" id="d311" />
         </div>
         <div class="d32">
-          <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" multiple/> <div id="image_container"></div> <script> function setThumbnail(event) { for (var image of event.target.files) { var reader = new FileReader(); reader.onload = function(event) { var img = document.createElement("img"); img.setAttribute("src", event.target.result); document.querySelector("div#image_container").appendChild(img); }; console.log(image); reader.readAsDataURL(image); } } </script>
-
+          <input
+            type="file"
+            id="image"
+            accept="image/*"
+            onchange="setThumbnail(event);"
+            multiple
+          />
+          <div id="image_container"></div>
+          <script>
+            function setThumbnail(event) {
+              for (var image of event.target.files) {
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                  var img = document.createElement("img");
+                  img.setAttribute("src", event.target.result);
+                  document
+                    .querySelector("div#image_container")
+                    .appendChild(img);
+                };
+                console.log(image);
+                reader.readAsDataURL(image);
+              }
+            }
+          </script>
         </div>
-      
       </div>
-      <div>
-      <select>
-        <option value="">물품 태그 리스트</option>
-        <option value="">방가</option>
-        <option value="">시계</option>
-        <option value="">계시</option>
-        <option value="">지갑</option>
-        <option value="">신발</option>
-        <option value="">발신</option>
-      </select>
-    </div>
-      <div class="d4">
-        <p>제목</p>
-        </div>
-        </section>
-        </body>
-
+      <div class="dd">
+        <input type="text" placeholder="#가방#신발#시계" />
+        <input type="button" value="등록하기" />
+      </div>
+      <div class="d4"></div>
+    </section>
+  </body>
 </html>
