@@ -6,29 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>swap people 포스팅</title>
     <link rel="stylesheet" href="./reset.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      header {
-        text-align: center;
-        font-size: 2rem;
-        margin-top: 70px;
-        margin-bottom: 50px;
-      }
+
+      
       a {
         border: 1px solid rgb(94, 80, 80);
         width: 100%;
         display: inline-block;
         align-self: center;
       }
-      section {
-        display: flex;
-        flex-direction: column;
-        font-size: 1rem;
-      }
+      
       div {
         display: flex;
         flex-direction: column;
@@ -102,14 +90,31 @@
         width: 100%;
         height: 10%;
       }
-    </style>
+      </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/team.css" />
+    <script
+    src="https://kit.fontawesome.com/bd2bbc2e2d.js"
+    crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <p>내꺼니꺼 우리꺼</p>
-      <a></a>
-    </header>
-    <section>
+      <h1>내꺼니꺼</h1>
+          <div id="group">
+              <i class="fa-solid fa-people-roof fa-3x" style="color:white"></i>
+            </div>
+            <div id="bell">
+              <i class="fa-regular fa-bell fa-3x" style="color:white"></i>
+            </div>
+            <div id="mypage">
+              <i class="fa-solid fa-circle-user fa-3x" style="color:white"></i>
+            </div>
+  </header>
+  <section>
       <div class="d3">
         <div class="d31">
           <img src="직찍1.jpg" id="d311" />
@@ -149,7 +154,6 @@
           class="tb"
           type="text"
           placeholder="내용을 입력해주세요"
-          style="height: 40px"
         />
       </div>
       <div class="d2">
@@ -160,7 +164,7 @@
           rows="20"
         ></textarea>
       </div>
-      <div style="flex-direction:row;">
+      <div >
         <div>
           <img class="addr" src="저장주소.PNG"/>
         </div>
