@@ -7,17 +7,47 @@
     <title>swap people 포스팅</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
+      rel="stylesheet"
+    />
     <style>
-
-      
-      a {
-        border: 1px solid rgb(94, 80, 80);
-        width: 100%;
-        display: inline-block;
-        align-self: center;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-      
-      div {
+      header {
+        display: flex;
+        background-color: rgb(0 208 255);
+        font-family: "Gugi", cursive;
+        color: white;
+        height: 20vh;
+        align-items: center;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .d1 {
+        margin-left: auto;
+      }
+      .d2 {
+        margin-left: 27%;
+      }
+      .d2 i {
+        padding: 0 10px;
+      }
+      .d3 {
+       margin-left: 3%;
+       font-size: 20px;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+      }
+      section div {
         display: flex;
         flex-direction: column;
         width: 50vw;
@@ -31,13 +61,14 @@
         height: 50vh;
         align-self: center;
       }
-      .d3 {
+      .d31 {
         flex: 2;
+        margin-top: 5%;
       }
-      .d3 input {
+      .d31 input {
         width: 15vw;
       }
-      .d31 {
+      .d311 {
         flex: 1 0;
       }
       .d32 {
@@ -56,6 +87,13 @@
         width:10vw;
         height: 20vh;
       }
+      a {
+        display: flex;
+        border: 1px solid rgb(41, 172, 253);
+        width: 60%;
+        align-self: center;
+        margin: 3% 0;
+      }
       /* .d1,
       .d3 {
         flex: 2;
@@ -70,7 +108,7 @@
         height: 10rem;
         resize: none;
       }
-      .d4 {
+      .d41 {
         height: 100px;
       }
       .dd {
@@ -90,35 +128,33 @@
         width: 100%;
         height: 10%;
       }
-      </style>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/team.css" />
-    <script
-    src="https://kit.fontawesome.com/bd2bbc2e2d.js"
-    crossorigin="anonymous"
-    ></script>
+    </style>
   </head>
+  <script
+  src="https://kit.fontawesome.com/bd2bbc2e2d.js"
+  crossorigin="anonymous"
+></script>
   <body>
     <header>
-      <h1>내꺼니꺼</h1>
-          <div id="group">
-              <i class="fa-solid fa-people-roof fa-3x" style="color:white"></i>
-            </div>
-            <div id="bell">
-              <i class="fa-regular fa-bell fa-3x" style="color:white"></i>
-            </div>
-            <div id="mypage">
-              <i class="fa-solid fa-circle-user fa-3x" style="color:white"></i>
-            </div>
-  </header>
-  <section>
       <div class="d3">
-        <div class="d31">
-          <img src="직찍1.jpg" id="d311" />
+        <h1>니꺼<br>내꺼</h1>
+      </div>
+      <div class="d1">
+        <h1>내꺼니꺼</h1>
+      </div>
+      <div class="d2">
+        <i class="fa-solid fa-people-roof fa-3x" style="color: white"></i>
+        <i class="fa-regular fa-bell fa-3x" style="color: white"></i>
+        <i class="fa-solid fa-circle-user fa-3x" style="color: white"></i>
+      </div>
+    </header>
+    <section>
+      <a></a>
+      <div class="d31">
+        <div class="d311">
+          <img src="images/직찍1.jpg" id="d311" />
         </div>
+        <div></div>
         <div class="d32">
           <input
             type="file"
@@ -129,7 +165,7 @@
           />
           
           </div>
-          <div id="image_container"></div>
+          <div id="image_container" style="cursor: pointer ;"></div>
           <script>
             function setThumbnail(event) {
               for (var image of event.target.files) {
@@ -137,6 +173,10 @@
                 reader.onload = function (event) {
                   var img = document.createElement("img");
                   img.setAttribute("src", event.target.result);
+                  img.onclick = function(e) {
+    
+                    document.getElementById("d311").setAttribute("src", e.target.src);
+};
                   document
                     .querySelector("div#image_container")
                     .appendChild(img);
@@ -148,15 +188,17 @@
           </script>
         </div>
       </div>
-      <div class="d1">
+      <a></a>
+      <div class="d11">
         <p>제목</p>
         <input
           class="tb"
           type="text"
           placeholder="내용을 입력해주세요"
+          style="height: 40px"
         />
       </div>
-      <div class="d2">
+      <div class="d21">
         <p>내용</p>
         <textarea
           placeholder="내용을 입력해주세요"
@@ -164,14 +206,16 @@
           rows="20"
         ></textarea>
       </div>
-      <div >
+      <a></a>
+      <div style="flex-direction:row;">
         <div>
-          <img class="addr" src="저장주소.PNG"/>
+          <img class="addr" src="images/저장주소.PNG"/>
         </div>
         <div>
           <input type="text" placeholder="북광주세무서">
         </div>
       </div>
+      <a></a>
       <div class="dd">
         <p>등록할 태그 작성</p>
         <input type="text" placeholder="#가방#신발#시계" />
@@ -179,7 +223,7 @@
         <input type="text" placeholder="#가방#신발#시계" />
         <input type="button" value="등록하기" />
       </div>
-      <div class="d4"></div>
+      <div class="d41"></div>
     </section>
   </body>
 </html>
